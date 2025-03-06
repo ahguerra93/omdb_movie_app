@@ -9,3 +9,8 @@ abstract class Failure extends Equatable {
 
 /// Represents a server-related failure, such as a 500 response.
 class ServerFailure extends Failure {}
+
+class UnknownFailure extends Failure {
+  UnknownFailure({this.message});
+  final String? message;
+}

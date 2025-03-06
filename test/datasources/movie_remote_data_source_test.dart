@@ -22,15 +22,7 @@ void main() {
   });
 
   group('searchMovies', () {
-    final tQuery = 'Inception';
-    final tMovieModels = [
-      MovieModel(
-        title: 'Inception',
-        year: '2010',
-        imdbID: 'tt1375666',
-        poster: 'N/A',
-      )
-    ];
+    const tQuery = 'Inception';
 
     test('should perform a GET request and return a list of MovieModels',
         () async {
@@ -79,17 +71,7 @@ void main() {
   });
 
   group('fetchMovieDetails', () {
-    final tMovieId = 'tt1375666';
-    final tMovieDetails = MovieDetailsModel(
-      title: 'Inception',
-      year: '2010',
-      director: 'Christopher Nolan',
-      actors: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
-      plot:
-          'A thief steals corporate secrets through dream-sharing technology.',
-      runtime: '148 min',
-      genre: 'Action, Adventure, Sci-Fi',
-    );
+    const tMovieId = 'tt1375666';
 
     test('should perform a GET request and return a MovieDetailsModel',
         () async {
@@ -110,15 +92,15 @@ void main() {
       );
 
       final expectedModel = MovieDetailsModel(
-        title: 'Inception',
-        year: '2010',
-        director: 'Christopher Nolan',
-        actors: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
-        plot:
-            'A thief steals corporate secrets through dream-sharing technology.',
-        runtime: '148 min',
-        genre: 'Action, Adventure, Sci-Fi',
-      );
+          title: 'Inception',
+          year: '2010',
+          director: 'Christopher Nolan',
+          actors: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
+          plot:
+              'A thief steals corporate secrets through dream-sharing technology.',
+          runtime: '148 min',
+          genre: 'Action, Adventure, Sci-Fi',
+          poster: '');
 
       // Act
       final result = await dataSource.fetchMovieDetails('tt1375666');

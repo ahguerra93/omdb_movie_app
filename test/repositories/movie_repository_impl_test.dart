@@ -26,10 +26,6 @@ void main() {
       MovieModel(
           title: 'Inception', year: '2010', imdbID: 'tt1375666', poster: 'N/A'),
     ];
-    final tMovies = [
-      Movie(
-          title: 'Inception', year: '2010', imdbID: 'tt1375666', poster: 'N/A'),
-    ];
 
     test(
         'should return movie list when the call to remote data source is successful',

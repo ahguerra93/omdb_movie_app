@@ -8,9 +8,9 @@ import 'package:omdb_movie_app/domain/entities/movie.dart';
 import 'package:omdb_movie_app/domain/entities/movie_details.dart';
 import 'package:omdb_movie_app/domain/usecases/get_movie_details.dart';
 import 'package:omdb_movie_app/domain/usecases/search_movies.dart';
-import 'package:omdb_movie_app/presentation/bloc/movie_bloc.dart';
-import 'package:omdb_movie_app/presentation/bloc/movie_event.dart';
-import 'package:omdb_movie_app/presentation/bloc/movie_state.dart';
+import 'package:omdb_movie_app/presentation/bloc/movie/movie_bloc.dart';
+import 'package:omdb_movie_app/presentation/bloc/movie/movie_event.dart';
+import 'package:omdb_movie_app/presentation/bloc/movie/movie_state.dart';
 
 import 'movie_bloc_test.mocks.dart';
 
@@ -70,15 +70,15 @@ void main() {
 
   group('GetMovieDetailsEvent', () {
     final tMovieDetails = MovieDetails(
-      title: 'Inception',
-      year: '2010',
-      director: 'Christopher Nolan',
-      actors: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
-      plot:
-          'A thief steals corporate secrets through dream-sharing technology.',
-      runtime: '148 min',
-      genre: 'Action, Adventure, Sci-Fi',
-    );
+        title: 'Inception',
+        year: '2010',
+        director: 'Christopher Nolan',
+        actors: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
+        plot:
+            'A thief steals corporate secrets through dream-sharing technology.',
+        runtime: '148 min',
+        genre: 'Action, Adventure, Sci-Fi',
+        poster: '');
 
     blocTest<MovieBloc, MovieState>(
       'emits [MovieLoading, MovieDetailsLoaded] when details are fetched successfully',

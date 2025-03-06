@@ -39,3 +39,18 @@ class GetMovieDetailsEvent extends MovieEvent {
   @override
   List<Object?> get props => [movieId];
 }
+
+/// Event triggered when the user selects a movie as one of its favorites
+/// This event contains the ID of the selected movie.
+class SetMovieAsFavoriteEvent extends MovieEvent {
+  // The unique identifier of the movie selected by the user.
+  final String movieId;
+
+  /// Constructor to initialize the `SetMovieAsFavoriteEvent` with the movie ID.
+  SetMovieAsFavoriteEvent(this.movieId);
+
+  /// Override the `props` property to include the `movieId` field.
+  /// This ensures that events with the same movie ID are considered equal.
+  @override
+  List<Object?> get props => [movieId];
+}

@@ -8,6 +8,7 @@ A Flutter application to search for movies and view detailed information using t
 
 - **Search Movies**: Search for movies by name and view a list of results.
 - **Movie Details**: View detailed information such as the plot, director, actors, runtime, and genre.
+- **Favorites**: Pick favorites, the selections will be stored locally
 - **Responsive Design**: Optimized for various screen sizes.
 - **Error Handling**: Displays appropriate messages for API errors or no network connection.
 
@@ -59,6 +60,7 @@ Clone this repository to your local machine:
      ```bash
      flutter run
      ```
+   - Once inside the app use credentials `user123`/`test123`
 
 ---
 
